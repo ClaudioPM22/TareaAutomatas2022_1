@@ -31,30 +31,28 @@ class Stack: # Creamos la clase Stack
 #pila.pop() # Utilizamos el metodo pop
 #pila.print_stack() # Mostramos nuevamente los elementos de la pila
 
-pila = Stack()
-lEstados = []
-lSimbolos = []
-lEstadosSgte = []
-pila1 = Stack()
-estadoInicial = []
-lEstadoFinal = []
-palabra = []
+#(q0, a, R) => (q0, AR)
+#(q0, a, A) => (q0, AA)
 
-def largo_palabra(x):
+#Para las trancisiones 
+lEstados = []       #contiene los estados de las trancisiones
+lSimbolos = []      #contiene los simbolos de las trancisiones
+pila = Stack()      #va marcando los simbolos
+lEstadosSgte = []   #contiene los estados a los que se cambia
+#pila1 = Stack()     
+
+#Datos extras
+estadoInicial = ""  #contiene al estado inicial
+lEstadoFinal = []   #contiene los estados finales
+palabra = ""        #contiene la palabra a verificar
+
+def largo_palabra(x):       #funcion para ver el largo de una palabra
     l = 0
     for i in x:
         l+= 1
     return l
 
-#palabra = input("Ingrese palabra de entrada: ")
-"""transiciones = input("Ingrese transiciones: ")
-c=0
-for i in range(largo_palabra(transiciones)):
-    if(transiciones[i] == "("):
-        while():
-            print("")
-"""
-estadoInicial = input("Ingrese estado inicial: ")
+estadoInicial = input("Ingrese estado inicial: ") # recibimos el estado inicial
 fin = True
 while(fin):
     estadoFinal = input("Ingrese un estado final: ")
@@ -82,6 +80,20 @@ while(fin):
         fin = True
     else:
         fin = False
+"""
+lEstados=        ['q0','q0','q0','q1','q1']       #Aqui van las transiciones van por orden[1°transicion, 2°, 3°,...]
+lSimbolo=        [ 'a', 'a', 'b', 'b', 'E']
+actualStack=     [ 'R', 'A', 'A', 'A', 'R']
+estadoSiguiente= ['q0','q0','q1','q1','qf']
+reemplazoStack=  ['AR','AA', 'E', 'E', 'R']
+ pila = "AAR" 
+ "aaaabbbb"
+ ""
+estadoActual = lEstados[0]
+estadoActual = estadoInicial # q0
+if(estadoActual != )
+
+"""
 
 
 
