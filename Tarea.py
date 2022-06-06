@@ -21,7 +21,7 @@ class Stack: # Creamos la clase Stack
         print(self.items)
 
 
-pila = Stack()
+
 
 # ingresamos algunos elementos a la pila
 #pila.push('a')
@@ -31,14 +31,58 @@ pila = Stack()
 #pila.pop() # Utilizamos el metodo pop
 #pila.print_stack() # Mostramos nuevamente los elementos de la pila
 
-q0 = q1 = q2 = q3 = q4 = q5 = True 
-estados = [q0,q1,q2,q3,q4,q5]
-estadoInicial = [q0]
-estadoFinal = []
+pila = Stack()
+lEstados = []
+lSimbolos = []
+lEstadosSgte = []
+pila1 = Stack()
+estadoInicial = []
+lEstadoFinal = []
+palabra = []
 
-palabra = input("Ingrese palabra de entrada: ")
+def largo_palabra(x):
+    l = 0
+    for i in x:
+        l+= 1
+    return l
 
-for i in palabra:
-    print(i, end = "")
-print("\n")
+#palabra = input("Ingrese palabra de entrada: ")
+"""transiciones = input("Ingrese transiciones: ")
+c=0
+for i in range(largo_palabra(transiciones)):
+    if(transiciones[i] == "("):
+        while():
+            print("")
+"""
+estadoInicial = input("Ingrese estado inicial: ")
+fin = True
+while(fin):
+    estadoFinal = input("Ingrese un estado final: ")
+    lEstadoFinal.append(estadoFinal)
+    sigue = input("Si desea agregar otro estado final digite S(sino enter): ")
+    if("S"== sigue):
+        fin = True
+    else:
+        fin = False
+fin = True
+print("\n\nIngrese transicion por transicion a continuacion: ")
+while(fin):
+    estado = input("Ingrese estado: ")
+    lEstados.append(estado)
+    simbolo = input("Ingrese el simbolo: ")
+    lSimbolos.append(simbolo)
+    simStack = input("Ingrese simbolo del Stack: ")
+    pila.push(simStack)
+    sgteEstado = input("Ingrese el estado al que cambia: ")
+    lEstadosSgte.append(sgteEstado)
+    sgteStack = input ("Ingrese el siguiente simbolo de stack: ")
+    pila1 = Stack()
+    sigue = input("Si desea agregar otra transicion digite S: ")
+    if("S"== sigue):
+        fin = True
+    else:
+        fin = False
+
+
+
 
